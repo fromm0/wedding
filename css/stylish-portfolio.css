@@ -196,8 +196,9 @@ hr.small {
     display: table;
     width: 100%;
     height: 400px;
-    color: #fff;
+    color: black;
     background: url(../img/main.jpg) no-repeat center center scroll;
+	opacity: 0.6;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -216,10 +217,11 @@ hr.small {
 
 .img-portfolio {
     margin: 0 auto;
+	opacity: 0.8;
 }
 
 .img-portfolio:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* Call to Action */
