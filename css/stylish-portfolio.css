@@ -27,10 +27,6 @@ body {
 	font-size: 30px;
 }
 
-.about h2 {
-	font-size:26px;
-}
-
 .name span {
 	font-weight: bold;
 }
@@ -180,6 +176,15 @@ hr.small {
     padding: 50px 0;
 }
 
+.about h2 {
+	font-size:26px;
+	margin-bottom: 20px;
+}
+
+.about .add_border {
+    border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
 /* Services */
 
 .services {
