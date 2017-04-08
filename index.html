@@ -191,6 +191,8 @@
 	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=djCsmFpdFnS1o05kPY_q"></script>
     <!-- Custom Theme JavaScript -->
     <script>
+	<!-- prevent height changes because of address bar -->
+	$("#top").height(window.innerHeight);
 
 	document.getElementById('links').onclick = function (event) {
 	    event = event || window.event;
