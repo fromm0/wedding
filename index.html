@@ -102,49 +102,47 @@
         <!-- /.container -->
     </section>
 
-    <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Wedding Photos</h1>
-        </div>
-    </aside>
-
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <img src="img/wedding_img.jpg" width="30px" height="30px">
+                    <h1> Wedding Gallery! </h1>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
+						<div id="carousel-example-generic" class="carousel slide">
+	                        <!-- Indicators -->
+	                        <ol class="carousel-indicators">
+	                            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+	                            <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+	                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	                        </ol>
+
+	                        <!-- Wrapper for slides -->
+	                        <div class="carousel-inner">
+	                            <div class="item">
+	                                <img class="img-responsive img-full" src="img/portfolio-1.jpg" alt="">
+	                            </div>
+	                            <div class="item active">
+	                                <img class="img-responsive img-full" src="img/portfolio-2.jpg" alt="">
+	                            </div>
+	                            <div class="item">
+	                                <img class="img-responsive img-full" src="img/portfolio-3.jpg" alt="">
+	                            </div>
+								<div class="item">
+	                                <img class="img-responsive img-full" src="img/portfolio-4.jpg" alt="">
+	                            </div>
+	                        </div>
+
+	                        <!-- Controls -->
+	                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	                            <span class="icon-prev"></span>
+	                        </a>
+	                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	                            <span class="icon-next"></span>
+	                        </a>
+	                    </div>
                     </div>
                 </div>
                 <!-- /.col-lg-10 -->
@@ -224,6 +222,11 @@
         }
     });
 
+
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+
 	var map = new naver.maps.Map('map', {
     	center: new naver.maps.LatLng(35.1603858,126.8854408),
     	zoom: 10
@@ -233,8 +236,6 @@
 	    position: new naver.maps.LatLng(35.1603858,126.8854408),
 	    map: map
 	});
-
-
     </script>
 
 </body>
