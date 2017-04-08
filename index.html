@@ -16,17 +16,10 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+	<link href="css/blueimp-gallery.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -110,39 +103,41 @@
                     <h1> Wedding Gallery! </h1>
                     <hr class="small">
                     <div class="row">
-						<div id="carousel-example-generic" class="carousel slide">
-	                        <!-- Indicators -->
-	                        <ol class="carousel-indicators">
-	                            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-	                            <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-	                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-	                        </ol>
-
-	                        <!-- Wrapper for slides -->
-	                        <div class="carousel-inner">
-	                            <div class="item">
-	                                <img class="img-responsive img-full" src="img/portfolio-1.jpg" alt="">
-	                            </div>
-	                            <div class="item active">
-	                                <img class="img-responsive img-full" src="img/portfolio-2.jpg" alt="">
-	                            </div>
-	                            <div class="item">
-	                                <img class="img-responsive img-full" src="img/portfolio-3.jpg" alt="">
-	                            </div>
-								<div class="item">
-	                                <img class="img-responsive img-full" src="img/portfolio-4.jpg" alt="">
-	                            </div>
-	                        </div>
-
-	                        <!-- Controls -->
-	                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-	                            <span class="icon-prev"></span>
-	                        </a>
-	                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-	                            <span class="icon-next"></span>
-	                        </a>
-	                    </div>
+						<div id="links" class="img_gallery">
+							<a href="img/wedding-1.jpg" title="Wedding Photo - 1" data-gallery style="background:url(img/wedding-1.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75" alt="Wedding-1">
+							</a>
+							<a href="img/wedding-2.jpg" title="Wedding Photo - 2" data-gallery style="background:url(img/wedding-2.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75"alt="Wedding-2">
+							</a>
+							<a href="img/wedding-3.jpg" title="Wedding Photo - 3" data-gallery style="background:url(img/wedding-3.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75" alt="Wedding-3">
+							</a>
+							<a href="img/wedding-4.jpg" title="Wedding Photo - 4" data-gallery style="background:url(img/wedding-4.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75" alt="Wedding-4">
+							</a>
+							<a href="img/wedding-5.jpg" title="Wedding Photo - 5" data-gallery style="background:url(img/wedding-5.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75" alt="Wedding-1">
+							</a>
+							<a href="img/wedding-6.jpg" title="Wedding Photo - 6" data-gallery style="background:url(img/wedding-6.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75"alt="Wedding-2">
+							</a>
+							<a href="img/wedding-7.jpg" title="Wedding Photo - 7" data-gallery style="background:url(img/wedding-7.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75" alt="Wedding-3">
+							</a>
+							<a href="img/wedding-8.jpg" title="Wedding Photo - 8" data-gallery style="background:url(img/wedding-8.jpg) no-repeat center center">
+								<img src="img/frame.png" width="75" height="75" alt="Wedding-4">
+							</a>
+						</div>
+						<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls ">
+						    <div class="slides"></div>
+						    <h3 class="title"></h3>
+						    <a class="prev">‹</a>
+						    <a class="next">›</a>
+						    <a class="close">×</a>
+						    <a class="play-pause"></a>
+						    <ol class="indicator"></ol>
+						</div>
                     </div>
                 </div>
                 <!-- /.col-lg-10 -->
@@ -162,7 +157,6 @@
             </div>
         </div>
     </aside>
-
 
 	<!-- Map -->
     <section id="contact" class="map">
@@ -190,9 +184,10 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-	<script src="js/jquery.touchSwipe.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+	<!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	<!-- blueimp-gallery -->
+	<script src="js/blueimp-gallery.min.js"></script>
 	<!-- naver maps -->
 	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=djCsmFpdFnS1o05kPY_q"></script>
     <!-- Custom Theme JavaScript -->
@@ -223,21 +218,14 @@
         }
     });
 
-	$(".carousel").swipe({
-
-	  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-	    if (direction == 'left') $(this).carousel('next');
-	    if (direction == 'right') $(this).carousel('prev');
-
-	  },
-	  allowPageScroll:"vertical"
-
-	});
-
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
+	document.getElementById('links').onclick = function (event) {
+	    event = event || window.event;
+	    var target = event.target || event.srcElement,
+	        link = target.src ? target.parentNode : target,
+	        options = {index: link, event: event},
+	        links = this.getElementsByTagName('a');
+	    blueimp.Gallery(links, options);
+	};
 
 	var map = new naver.maps.Map('map', {
     	center: new naver.maps.LatLng(35.1603858,126.8854408),

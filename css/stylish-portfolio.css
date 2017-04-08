@@ -232,38 +232,13 @@ hr.small {
 }
 
 .img-responsive {
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
-.carousel-control .icon-next, .carousel-control .icon-prev {
-	width: 30px;
-	height: 30px;
-}
-
-.carousel-control .icon-next:before {
-	content: ""
-}
-
-.carousel-control .icon-prev:before {
-	content: ""
-}
-
-.container .row .icon-next {
-	background: url(../img/default-skin.png) 0 0 no-repeat;
-	background-position: -219px -44px;
-	background-size: 264px 88px;
-	content: " "
-}
-
-.container .row .icon-prev {
-	background: url(../img/default-skin.png) 0 0 no-repeat;
-	background-position: -187px -44px;
-	background-size: 264px 88px;
-	content: " "
-}
-
-.icon-prev {
-
+.img_gallery a {
+	margin-bottom: 5px;
+	background-size: cover !important;
+	display:inline-block;
 }
 .contact .name {
 	font-size: 20px;
