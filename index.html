@@ -223,12 +223,18 @@
             }
         }
     });
-	var mapOptions = {
+
+	var map = new naver.maps.Map('map', {
     	center: new naver.maps.LatLng(35.1603858,126.8854408),
     	zoom: 10
-	};
+	});
 
-	var map = new naver.maps.Map('map', mapOptions);
+	var marker = new naver.maps.Marker({
+	    position: new naver.maps.LatLng(35.1603858,126.8854408),
+	    map: map
+	});
+
+
     </script>
 
 </body>
