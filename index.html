@@ -192,32 +192,6 @@
 	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=djCsmFpdFnS1o05kPY_q"></script>
     <!-- Custom Theme JavaScript -->
     <script>
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-
 	document.getElementById('links').onclick = function (event) {
 	    event = event || window.event;
 	    var target = event.target || event.srcElement,
