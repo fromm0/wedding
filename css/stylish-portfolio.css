@@ -289,7 +289,7 @@ hr.small {
 /* Call to Action */
 
 .call-to-action {
-    padding: 25px 0;
+    padding: 15px 0;
 }
 
 .call-to-action .btn {
@@ -304,7 +304,7 @@ hr.small {
 
 @media(max-width:768px) {
     .map {
-        height: 75%;
+        height: 55%;
     }
 }
 
@@ -312,6 +312,17 @@ hr.small {
     pointer-events: none;
 }
 
+.location_info h4 {
+	font-size: 23px;
+}
+
+.location_info p {
+	font-size: 20px;
+}
+
+.location_info a {
+	font-size: 20px;
+}
 /* Footer */
 
 footer {
