@@ -190,6 +190,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+	<script src="js/jquery.touchSwipe.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 	<!-- naver maps -->
@@ -222,6 +223,17 @@
         }
     });
 
+	$(".carousel").swipe({
+
+	  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+	    if (direction == 'left') $(this).carousel('next');
+	    if (direction == 'right') $(this).carousel('prev');
+
+	  },
+	  allowPageScroll:"vertical"
+
+	});
 
     $('.carousel').carousel({
         interval: 5000 //changes the speed
