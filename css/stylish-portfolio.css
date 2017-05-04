@@ -27,7 +27,6 @@ dt {
 
 .text-vertical-center {
     display: table-cell;
-    text-align: center;
     vertical-align: bottom;
 }
 
@@ -185,7 +184,6 @@ hr.small {
 
 .about {
     padding: 20px 0;
-	background-color : #D1C8B0;
 }
 
 .about h2 {

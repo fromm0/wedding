@@ -27,10 +27,9 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-			<div>
+			<div style="margin-left: 30px;">
 				<h3>이병찬 <span style="color:red;">♥</span> 설지은</h3>
-				<h1 style="margin-top:30px;margin-bottom:30px;">결혼합니다.</h1>
-				<h3>2017년 5월 27일 낮 12시</h3>
+				<h3 style="margin-top:10px;">저희 결혼합니다.</h3>
 	            <br>
 			</div>
         </div>
@@ -38,7 +37,6 @@
 
     <!-- About -->
     <section id="about" class="about">
-		<div class="race_line"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" style="width:100%;">
@@ -91,7 +89,6 @@
             </div>
             <!-- /.row -->
         </div>
-		<div class="race_line"></div>
         <!-- /.container -->
     </section>
 
@@ -99,42 +96,12 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h1> Wedding Gallery! </h1>
-                    <hr class="small">
-                    <div class="row">
-						<div id="links" class="img_gallery">
-							<a href="img/wedding-1.jpg" title="Wedding Photo - 1" data-gallery style="background:url(img/wedding-1.jpg) no-repeat center center">
-								<img src="img/frame.png" width="75" height="75" alt="Wedding-1">
-							</a>
-							<a href="img/wedding-2.jpg" title="Wedding Photo - 2" data-gallery style="background:url(img/wedding-2.jpg) no-repeat center center">
-								<img src="img/frame.png" width="75" height="75"alt="Wedding-2">
-							</a>
-							<a href="img/wedding-3.jpg" title="Wedding Photo - 3" data-gallery style="background:url(img/wedding-3.jpg) no-repeat center center">
-								<img src="img/frame.png" width="75" height="75" alt="Wedding-3">
-							</a>
-							<a href="img/wedding-4.jpg" title="Wedding Photo - 4" data-gallery style="background:url(img/wedding-4.jpg) no-repeat center center">
-								<img src="img/frame.png" width="75" height="75" alt="Wedding-4">
-							</a>
-							<a href="img/wedding-5.jpg" title="Wedding Photo - 5" data-gallery style="background:url(img/wedding-5.jpg) no-repeat center center">
-								<img src="img/frame.png" width="75" height="75" alt="Wedding-1">
-							</a>
-							<a href="img/wedding-6.jpg" title="Wedding Photo - 6" data-gallery style="background:url(img/wedding-6.jpg) no-repeat center center">
-								<img src="img/frame.png" width="75" height="75"alt="Wedding-2">
-							</a>
-						</div>
-						<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls ">
-						    <div class="slides"></div>
-						    <h3 class="title"></h3>
-						    <a class="prev">‹</a>
-						    <a class="next">›</a>
-						    <a class="close">×</a>
-						    <a class="play-pause"></a>
-						    <ol class="indicator"></ol>
-						</div>
-                    </div>
-                </div>
-                <!-- /.col-lg-10 -->
+				<img src="img/wedding-1.jpg" style="width:100%;padding-bottom:30px;"/>
+				<img src="img/wedding-2.jpg" style="width:100%;padding-bottom:30px;"/>
+				<img src="img/wedding-3.jpg" style="width:100%;padding-bottom:30px;"/>
+				<img src="img/wedding-4.jpg" style="width:100%;padding-bottom:30px;"/>
+				<img src="img/wedding-5.jpg" style="width:100%;padding-bottom:30px;"/>
+				<img src="img/wedding-6.jpg" style="width:100%;padding-bottom:30px;"/>
             </div>
             <!-- /.row -->
         </div>
@@ -142,11 +109,11 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+    <aside class="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>찾아오시는 길</h3>
+                    <h3 style="font-size: 32px;">찾아오시는 길</h3>
                 </div>
             </div>
         </div>
@@ -173,29 +140,30 @@
                 </div>
             </div>
         </div>
+		<div class="container location_info">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>전세버스</strong>
+                    </h4>
+                    <p><span style="color:#337ab7">06:50</span> 양재역 9번출구 서초문화예술회관 앞 출발
+                        <br><span style="color:#337ab7">07:30</span> 정자역 4번출구 기아대리점 앞 출발
+						<br><span style="color:#337ab7">07:45</span> 녹십자 종합연구소 앞 출발</p>
+                    <br>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 	<!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-	<!-- blueimp-gallery -->
-	<script src="js/blueimp-gallery.min.js"></script>
 	<!-- naver maps -->
 	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=djCsmFpdFnS1o05kPY_q"></script>
     <!-- Custom Theme JavaScript -->
     <script>
 	<!-- prevent height changes because of address bar -->
 	$("#top").height(window.innerHeight);
-
-	document.getElementById('links').onclick = function (event) {
-	    event = event || window.event;
-	    var target = event.target || event.srcElement,
-	        link = target.src ? target.parentNode : target,
-	        options = {index: link, event: event},
-	        links = this.getElementsByTagName('a');
-	    blueimp.Gallery(links, options);
-	};
 
 	var map = new naver.maps.Map('map', {
     	center: new naver.maps.LatLng(35.1603858,126.8854408),
